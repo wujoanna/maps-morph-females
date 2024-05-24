@@ -14,33 +14,40 @@ Youngflesh, C, JF Saracco, RB Siegel, MW Tingley. 2022. [Abiotic conditions shap
 **Repository structure:**
 
 * `Scripts/`
-  - `1-process-data.R`
-  - `2-process-elev.R`
-  - `3-process-daymet/`
-      - `3-proces-daymet.R`
-      - `daymet_query.txt`
-      - `daymet_spt_batch.sh`
-  - `4-si-tle.R`
-  - `5-wi-tle.R`
-  - `6-si-temp-space.R`
-  - `7-si-temp-lag.R`
-  - `8-temp-cov.R`
-  - `9-backtransform.R`
-  - `10-analyze-results.R`
-  - `11-haldanes.R`
-  - `model_files`
-    - `morph-temp-space.stan`
-    - `morph-temp-ss2.stan`
-    - `morph-tle.stan`
-    - `temp_sp_cov.stan`
+  * `1-process-data/`
+    * `1a-process-elev.R` - stitch elevation data into single .tif
+    * `1b-process-MAPS.R` - process MAPS data to create main MAPS data file
+    * `1c-process-range-maps.R` - process range maps for each species
+    * `1d-process-daymet.R` - DL and process daymet (temp, precip) data
+    * `1e-process-phylo-names.R` - process phylo names (matching)
+    * `1f-morph-indices.R` - calculate morph indices
+  - `4-si-tle.R` - old
+  - `5-wi-tle.R` - old
+  - `6-si-temp-space.R` - old
+  - `7-si-temp-lag.R` - old
+  - `8-temp-cov.R` - old
+  - `9-backtransform.R` - old
+  - `10-analyze-results.R` - old
+  - `11-haldanes.R` - old
+  - `model_files/`
+    - `morph-temp-space.stan` - old
+    - `morph-temp-ss2.stan` - old
+    - `morph-tle.stan` - old
+    - `temp_sp_cov.stan` - old
 * `Data/`
-  - `bird_phylo/`
-    - `phylo_names_key-2021-05-19.csv`
-    - `tree-pruner-XXXX/` [ignored - available [here](http://www.birdtree.org)]
-  - `GMTED2010_mean/` [ignored - available [here](https://www.usgs.gov/core-science-systems/eros/coastal-changes-and-impacts/gmted2010?qt-science_support_page_related_con=0#qt-science_support_page_related_con)]
-  - `MAPS_data.csv` [ignored - available [here](DRYAD LINK)]
-  - `Gen_time_Bird_et_al_2020_table_4.csv` [ignored - available [here](https://conbio.onlinelibrary.wiley.com/doi/abs/10.1111/cobi.13486)]
-  - `Hendry_et_al_2008_Mol_Eco.csv` [ignored - available [here](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-294X.2007.03428.x?casa_token=xSDmUC85ERkAAAAA%3Ap5kaUUhK9w2wV7MiVqOvU52Eo-2sjFA1_h977u6L0YiXTcEuhPIfPwU8G1H8Q3CgoCSdPtJBAwOHFEdp)]
-* `Results/` [ignored]
-* `Figures/`
-  - `PPO/` - prior posterior overlap
+  * `LO/` - Raw data
+    * `bird_phylo/` - phylogenetic tree data frmo birdtree.org
+    * `BOTW_2022/` - birdlife range maps
+    * `daymet_query_locations.csv` - maps station locations for daymet query
+    * `daymet-dl-YYYY-MM-DD.rds` - daymet downloaded (pre-processing)
+    * `GMTED2010_mean/` - elevation data
+    * `MAPS_data/` - raw MAPS data
+  * `L1/` - Level 1 processing
+    * `bird_phylo` - processed bir phylogenetic names
+    * `BOTW_ranges-YYYY-MM-DD.rds` - subset of bird ranges
+    * `daymet-main-YYYY-MM-DD.rds` - processed daymet data (monthly)
+    * `elev_mosaic.tif` - mosaiced elevation data
+    * `MAPS-main-YYYY-MM-DD.rds` - processed MAPS data
+    * `range_names_key-YYYY-MM-DD.csv` - range names for processing
+  * `L2/` - Level 2 processing
+    * `MAPS-processed-YYYY-MM-DD.rds` - MAPS data with morph indices (males only as of 2024-05-24)
