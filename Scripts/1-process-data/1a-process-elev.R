@@ -11,7 +11,10 @@
 
 # set dirs -------------------------------------------------------------------
 
-dir <- '~/Work/Research/Projects/maps-morph-females/'
+# CY
+# dir <- '~/Work/Research/Projects/maps-morph-females/'
+# JW
+dir <- "/Users/joannawu/Library/CloudStorage/Box-Box/Documents/AcademicScience/Projects/MorphFemales/"
 
 
 # mosaic GMTED tifs -------------------------------------------------------

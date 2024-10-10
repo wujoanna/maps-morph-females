@@ -6,8 +6,8 @@
 
 # set dirs ----------------------------------------------------------------
 
-RUN_DATE <- '2024-05-24'
-dir <- '~/Work/Research/Projects/maps-morph-females/'
+RUN_DATE <- "2024-07-15"
+dir <- "/Users/joannawu/Library/CloudStorage/Box-Box/Documents/AcademicScience/Projects/MorphFemales/"
 
 
 # load packages -----------------------------------------------------------
