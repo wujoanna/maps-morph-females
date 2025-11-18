@@ -9,7 +9,7 @@
 RUN_DATE <- '2024-05-24'
 PHYLO_DATE <- '2024-05-24'
 MAPS_DATE <- '2024-05-24'
-dir <- '~/Work/Research/Projects/maps-morph-females/'
+dir <- '/Users/joannawu/Library/CloudStorage/Box-Box/Documents/AcademicScience/Projects/MorphFemales/'
 
 
 # load packages -----------------------------------------------------------

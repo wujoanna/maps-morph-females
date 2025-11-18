@@ -15,7 +15,7 @@
 # dir <- '~/Work/Research/Projects/maps-morph-females/'
 # JW
 dir <- "/Users/joannawu/Library/CloudStorage/Box-Box/Documents/AcademicScience/Projects/MorphFemales/"
-
+setwd(dir)
 
 # mosaic GMTED tifs -------------------------------------------------------
 

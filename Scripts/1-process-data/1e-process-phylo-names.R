@@ -8,7 +8,7 @@
 
 RUN_DATE <- '2024-05-24'
 MAPS_DATE <- '2024-05-24'
-dir <- '~/Work/Research/Projects/maps-morph-females/'
+dir <- '/Users/joannawu/Library/CloudStorage/Box-Box/Documents/AcademicScience/Projects/MorphFemales/'
 
 
 # load packages -----------------------------------------------------------
@@ -48,6 +48,7 @@ match <- data.frame(MAPS_sci_name = nm$MAPS_sci_name,
                         'Regulus_calendula',
                         'Picoides_nuttallii',
                         'Picoides_pubescens',
+                        'Picoides_scalaris',
                         'Picoides_villosus',
                         'Oporornis_formosus',
                         'Oporornis_philadelphia',
@@ -61,12 +62,14 @@ match <- data.frame(MAPS_sci_name = nm$MAPS_sci_name,
                         'Vermivora_peregrina',
                         'Vermivora_ruficapilla',
                         'Vermivora_virginiae',
+                        'Pipilo_aberti',
                         'Pipilo_crissalis',
                         'Seiurus_motacilla',
                         'Seiurus_noveboracensis',
                         'Parus_atricapillus',
                         'Parus_carolinensis',
                         'Parus_gambeli',
+                        'Parus_hudsonicus',
                         'Parus_rufescens',
                         'Parula_americana',
                         'Dendroica_caerulescens',
@@ -78,17 +81,20 @@ match <- data.frame(MAPS_sci_name = nm$MAPS_sci_name,
                         'Dendroica_occidentalis',
                         'Dendroica_pensylvanica',
                         'Dendroica_petechia',
+                        'Dendroica_pinus',
+                        'Dendroica_striata',
                         'Dendroica_townsendi',
                         'Dendroica_virens',
                         'Carduelis_pinus',
                         'Carduelis_psaltria',
+                        'Spizella_arborea',
+                        'Troglodytes_troglodytes',
                         'Troglodytes_troglodytes',
                         'Vermivora_pinus'))
 
 #fill in gaps
-for (i in 1:NROW(match))
-{
-  #i <- 1
+for (i in 1:nrow(match)){
+  i <- 1
   names_df$BT_sci_name[which(names_df$MAPS_sci_name == match$MAPS_sci_name[i])] <- match$BT_sci_name[i]
 }
 

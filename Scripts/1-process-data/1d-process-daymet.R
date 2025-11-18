@@ -4,11 +4,12 @@
 # https://daymet.ornl.gov/
 # 
 #######################
+# --- ran into memory processing errors
 
 
 # input -------------------------------------------------------------------
 
-dir <- '~/Work/Research/Projects/maps-morph-females/'
+dir <- '/Users/joannawu/Library/CloudStorage/Box-Box/Documents/AcademicScience/Projects/MorphFemales/'
 daymet_process_date <- '2024-05-24'
 
 

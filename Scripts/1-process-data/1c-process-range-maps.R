@@ -71,7 +71,7 @@ names_df_mod <- read.csv(file = paste0(dir,
 sn <- paste0(dQuote(names_df_mod$BL_sci_name), collapse = ',')
 
 #range data for subset of species
-BL_data_filt <- dplyr::filter(BL_data, sci_name %in% names_df_mod$BL_sci_name)
+BL_data_filt <- dplyr::filter(BL_data, ScientificName %in% names_df_mod$BL_sci_name)
 
 saveRDS(BL_data_filt, paste0(dir, 'Data/L1/BOTW_ranges-', run_date, '.rds'))
 
